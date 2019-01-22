@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chat application</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <link href="/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        
+        <form action="/logout" method="GET">
+                <input type="submit" id="logout" value="logout"> 
+        </form>
+        <div id = "onlineUsers"></div>
+            <input type="button" id="showusers" value="users-online"/>
+            
+            <div id='usr'></div>
+        </div>
+        <div id="mario-chat" >
+            <h2 id="sendto"></h2>
+            <h4 id= 'typing' style="color:lightseagreen"></h2>
+            <div id="chat-window">
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <p id="handle" value='enter the user' hidden="true"></p>
+            <input id="block"  type = "button" value="block this user" style="display:none"/>
+            <input id="unblock"  type = "button" value="unblock this user" style="display:none"/>
+            <input id="message" type="text" placeholder="Message" />
+            <button id="send">Send</button>
+        </div>
+        
+
+    </body>
+    <script src="/chat.js"></script>
+</html>
